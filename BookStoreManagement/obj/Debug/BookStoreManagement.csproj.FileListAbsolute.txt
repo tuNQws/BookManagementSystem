@@ -1,0 +1,13 @@
+C:\Users\tuan\source\repos\BookStoreManagement\bin\Debug\BookStoreManagement.exe.config
+C:\Users\tuan\source\repos\BookStoreManagement\bin\Debug\BookStoreManagement.exe
+C:\Users\tuan\source\repos\BookStoreManagement\bin\Debug\BookStoreManagement.pdb
+C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.csproj.AssemblyReference.cache
+C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.csproj.SuggestedBindingRedirects.cache
+C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.fLogin.resources
+C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.Properties.Resources.resources
+C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.csproj.GenerateResource.cache
+C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.csproj.CoreCompileInputs.cache
+C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.exe
+C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.pdb
+C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.fBookManager.resources
+C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.fCashier.resources
