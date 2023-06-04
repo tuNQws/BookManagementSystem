@@ -24,7 +24,7 @@ namespace BookStoreManagement.DAO
         {
             List<InvoiceDetail> list = new List<InvoiceDetail>();
 
-            string query = string.Format("select b.title, i.quantity, i.unit_price from Invoice_Detail as i, Book as b where invoice_id = {0} AND b.id = i.book_id", InvoiceId);
+            string query = string.Format("select i.book_id, b.title, i.quantity, i.unit_price from Invoice_Detail as i, Book as b where invoice_id = {0} AND b.id = i.book_id", InvoiceId);
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -44,6 +44,26 @@ namespace BookStoreManagement.DAO
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
+        }
+
+        public InvoiceDetail GetInvoiceDetail(int invoiceId, int bookId)
+        {
+            string query = string.Format("select i.book_id, b.title, i.quantity, i.unit_price from Invoice_Detail as i, Book as b where i.invoice_id = {0} AND b.id = i.book_id AND i.book_id = {1}", invoiceId, bookId);
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                InvoiceDetail invoiceDetail = new InvoiceDetail(item);
+                return invoiceDetail;
+            }
+
+            return null;
+        }
+
+        public void DeleteInvoiceDetail(int invoice_id, int book_id)
+        {
+            DataProvider.Instance.ExecuteQuery(string.Format("delete Invoice_Detail WHERE invoice_id = {0} AND book_id = {1}", invoice_id, book_id));
         }
 
         //public bool UpdateBookEntryDetail(int id, DateTime date_entry, int amount_entry, int emp_id, int supplier_id)

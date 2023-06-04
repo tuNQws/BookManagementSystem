@@ -63,6 +63,18 @@
     <Compile Include="DTO\Invoice.cs" />
     <Compile Include="DTO\InvoiceDetail.cs" />
     <Compile Include="DTO\Supplier.cs" />
+    <Compile Include="fAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAdmin.Designer.cs">
+      <DependentUpon>fAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fBookEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBookEntry.Designer.cs">
+      <DependentUpon>fBookEntry.cs</DependentUpon>
+    </Compile>
     <Compile Include="fCashier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +95,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fAdmin.resx">
+      <DependentUpon>fAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBookEntry.resx">
+      <DependentUpon>fBookEntry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fBookManager.resx">
       <DependentUpon>fBookManager.cs</DependentUpon>
     </EmbeddedResource>

@@ -47,22 +47,40 @@ namespace BookStoreManagement.DAO
 
             return null;
         }
-
-        public bool InsertAccount(string name, string password, string email, string status, int isManager)
+        public List<Account> SearchAccountByUsername(string name)
         {
-            string query = string.Format("INSERT Account VALUES  ( N'{0}', N'{1}', {2}, N'{3}', {4})", name, password, email, status, isManager);
+
+            List<Account> list = new List<Account>();
+
+            string query = string.Format("SELECT * FROM Account WHERE dbo.fuConvertToUnsign1(username) LIKE N'%' + dbo.fuConvertToUnsign1(N'{0}') + '%'", name);
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Account food = new Account(item);
+                list.Add(food);
+            }
+
+            return list;
+        }
+        
+
+        public bool InsertAccount(string name, string password, string email)
+        {
+            string query = string.Format("INSERT Account (username, password, email) VALUES  ( N'{0}', N'{1}', N'{2}')", name, password, email);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
         }
 
-        //public bool DeleteAccount(string name)
-        //{
-        //    string query = string.Format("Delete Account where UserName = N'{0}'", name);
-        //    int result = DataProvider.Instance.ExecuteNonQuery(query);
+        public bool DeleteAccount(string name)
+        {
+            string query = string.Format("Delete Account where username = N'{0}'", name);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
 
-        //    return result > 0;
-        //}
+            return result > 0;
+        }
 
         //public bool ResetPassword(string name)
         //{

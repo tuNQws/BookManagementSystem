@@ -87,7 +87,7 @@
             this.panel3.Controls.Add(this.txbPassword);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(40, 91);
+            this.panel3.Location = new System.Drawing.Point(12, 76);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(457, 48);
@@ -124,6 +124,7 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.panel1);
+            this.panel5.Controls.Add(this.panel3);
             this.panel5.Location = new System.Drawing.Point(28, 15);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
@@ -159,7 +160,6 @@
             this.ClientSize = new System.Drawing.Size(535, 223);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel5);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fLogin";

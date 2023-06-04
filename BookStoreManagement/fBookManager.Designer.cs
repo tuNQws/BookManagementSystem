@@ -29,12 +29,16 @@
         private void InitializeComponent()
         {
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txbIdInvoice = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.btnViewInvoice = new System.Windows.Forms.Button();
             this.dtpkToDate = new System.Windows.Forms.DateTimePicker();
             this.dtpkFromDate = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtgvInvoiceDetail = new System.Windows.Forms.DataGridView();
             this.dtgvInvoice = new System.Windows.Forms.DataGridView();
             this.tcManager = new System.Windows.Forms.TabControl();
             this.tab1 = new System.Windows.Forms.TabPage();
@@ -42,6 +46,7 @@
             this.txbSearchBook = new System.Windows.Forms.TextBox();
             this.btnSearchBook = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnDeleteBook = new System.Windows.Forms.Button();
             this.btnUpdateBook = new System.Windows.Forms.Button();
             this.btnGetAllBook = new System.Windows.Forms.Button();
             this.btnAddBook = new System.Windows.Forms.Button();
@@ -80,14 +85,66 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dtgvBook = new System.Windows.Forms.DataGridView();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.txbBank = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.txbIdSupplier = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.txbTax = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.txbSupplierNumber = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.txbSupplierEmail = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel35 = new System.Windows.Forms.Panel();
+            this.panel36 = new System.Windows.Forms.Panel();
+            this.txbSupplierAddress = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.txbSupplierName = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel39 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.txbSearchSupplier = new System.Windows.Forms.TextBox();
+            this.btnSearchSupplier = new System.Windows.Forms.Button();
+            this.dtgvSupplier = new System.Windows.Forms.DataGridView();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.btnDeleteSupplier = new System.Windows.Forms.Button();
+            this.btnUpdateSupplier = new System.Windows.Forms.Button();
+            this.btnAllSupplier = new System.Windows.Forms.Button();
+            this.btnAddSupplier = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.txbIdBookEntry = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.dtgvBookEntryDetail = new System.Windows.Forms.DataGridView();
+            this.dtgvBookEntry = new System.Windows.Forms.DataGridView();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.dtpkToDateBookEntry = new System.Windows.Forms.DateTimePicker();
+            this.dtpkFromDateBookEntry = new System.Windows.Forms.DateTimePicker();
             this.btnPayCheck = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.chứcNăngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thêmNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnDeleteBook = new System.Windows.Forms.Button();
+            this.btnEntryBook = new System.Windows.Forms.Button();
+            this.cbSupplier = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvInvoiceDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvInvoice)).BeginInit();
             this.tcManager.SuspendLayout();
             this.tab1.SuspendLayout();
@@ -107,20 +164,67 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudPriceBook)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBook)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            this.panel25.SuspendLayout();
+            this.panel26.SuspendLayout();
+            this.panel28.SuspendLayout();
+            this.panel30.SuspendLayout();
+            this.panel32.SuspendLayout();
+            this.panel34.SuspendLayout();
+            this.panel36.SuspendLayout();
+            this.panel38.SuspendLayout();
+            this.panel24.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvSupplier)).BeginInit();
+            this.panel23.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvBookEntryDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvBookEntry)).BeginInit();
+            this.panel40.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.txbIdInvoice);
+            this.tabPage2.Controls.Add(this.label18);
             this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Controls.Add(this.panel1);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(880, 458);
+            this.tabPage2.Size = new System.Drawing.Size(917, 458);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Hóa đơn";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(726, 125);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(164, 41);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Xem thông tin hóa đơn";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txbIdInvoice
+            // 
+            this.txbIdInvoice.Enabled = false;
+            this.txbIdInvoice.Location = new System.Drawing.Point(849, 73);
+            this.txbIdInvoice.Margin = new System.Windows.Forms.Padding(4);
+            this.txbIdInvoice.Name = "txbIdInvoice";
+            this.txbIdInvoice.Size = new System.Drawing.Size(49, 22);
+            this.txbIdInvoice.TabIndex = 24;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(723, 76);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(123, 16);
+            this.label18.TabIndex = 23;
+            this.label18.Text = "ID hóa đơn đã chọn";
             // 
             // panel2
             // 
@@ -168,11 +272,22 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.dtgvInvoiceDetail);
             this.panel1.Controls.Add(this.dtgvInvoice);
             this.panel1.Location = new System.Drawing.Point(6, 41);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(711, 444);
+            this.panel1.Size = new System.Drawing.Size(711, 411);
             this.panel1.TabIndex = 0;
+            // 
+            // dtgvInvoiceDetail
+            // 
+            this.dtgvInvoiceDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvInvoiceDetail.Location = new System.Drawing.Point(0, 211);
+            this.dtgvInvoiceDetail.Name = "dtgvInvoiceDetail";
+            this.dtgvInvoiceDetail.RowHeadersWidth = 51;
+            this.dtgvInvoiceDetail.RowTemplate.Height = 24;
+            this.dtgvInvoiceDetail.Size = new System.Drawing.Size(711, 200);
+            this.dtgvInvoiceDetail.TabIndex = 1;
             // 
             // dtgvInvoice
             // 
@@ -181,17 +296,19 @@
             this.dtgvInvoice.Name = "dtgvInvoice";
             this.dtgvInvoice.RowHeadersWidth = 51;
             this.dtgvInvoice.RowTemplate.Height = 24;
-            this.dtgvInvoice.Size = new System.Drawing.Size(711, 441);
+            this.dtgvInvoice.Size = new System.Drawing.Size(711, 202);
             this.dtgvInvoice.TabIndex = 0;
             // 
             // tcManager
             // 
             this.tcManager.Controls.Add(this.tab1);
             this.tcManager.Controls.Add(this.tabPage2);
+            this.tcManager.Controls.Add(this.tabPage1);
+            this.tcManager.Controls.Add(this.tabPage3);
             this.tcManager.Location = new System.Drawing.Point(12, 45);
             this.tcManager.Name = "tcManager";
             this.tcManager.SelectedIndex = 0;
-            this.tcManager.Size = new System.Drawing.Size(888, 487);
+            this.tcManager.Size = new System.Drawing.Size(925, 487);
             this.tcManager.TabIndex = 0;
             // 
             // tab1
@@ -203,7 +320,7 @@
             this.tab1.Location = new System.Drawing.Point(4, 25);
             this.tab1.Name = "tab1";
             this.tab1.Padding = new System.Windows.Forms.Padding(3);
-            this.tab1.Size = new System.Drawing.Size(880, 458);
+            this.tab1.Size = new System.Drawing.Size(917, 458);
             this.tab1.TabIndex = 0;
             this.tab1.Text = "Sách";
             this.tab1.UseVisualStyleBackColor = true;
@@ -244,6 +361,15 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(576, 44);
             this.panel5.TabIndex = 2;
+            // 
+            // btnDeleteBook
+            // 
+            this.btnDeleteBook.Location = new System.Drawing.Point(438, 0);
+            this.btnDeleteBook.Name = "btnDeleteBook";
+            this.btnDeleteBook.Size = new System.Drawing.Size(135, 41);
+            this.btnDeleteBook.TabIndex = 3;
+            this.btnDeleteBook.Text = "Xóa";
+            this.btnDeleteBook.UseVisualStyleBackColor = true;
             // 
             // btnUpdateBook
             // 
@@ -617,6 +743,488 @@
             this.dtgvBook.Size = new System.Drawing.Size(576, 388);
             this.dtgvBook.TabIndex = 0;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.panel25);
+            this.tabPage1.Controls.Add(this.panel24);
+            this.tabPage1.Controls.Add(this.dtgvSupplier);
+            this.tabPage1.Controls.Add(this.panel23);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(917, 458);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Nhà cung cấp";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // panel25
+            // 
+            this.panel25.Controls.Add(this.panel26);
+            this.panel25.Controls.Add(this.panel28);
+            this.panel25.Controls.Add(this.panel30);
+            this.panel25.Controls.Add(this.panel32);
+            this.panel25.Controls.Add(this.panel34);
+            this.panel25.Controls.Add(this.panel36);
+            this.panel25.Controls.Add(this.panel38);
+            this.panel25.Location = new System.Drawing.Point(591, 56);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(283, 388);
+            this.panel25.TabIndex = 6;
+            // 
+            // panel26
+            // 
+            this.panel26.Controls.Add(this.txbBank);
+            this.panel26.Controls.Add(this.label9);
+            this.panel26.Controls.Add(this.panel27);
+            this.panel26.Location = new System.Drawing.Point(17, 249);
+            this.panel26.Margin = new System.Windows.Forms.Padding(4);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(256, 41);
+            this.panel26.TabIndex = 6;
+            // 
+            // txbBank
+            // 
+            this.txbBank.Location = new System.Drawing.Point(100, 8);
+            this.txbBank.Margin = new System.Windows.Forms.Padding(4);
+            this.txbBank.Name = "txbBank";
+            this.txbBank.Size = new System.Drawing.Size(126, 22);
+            this.txbBank.TabIndex = 5;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(8, 14);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(73, 16);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Ngân hàng";
+            // 
+            // panel27
+            // 
+            this.panel27.Location = new System.Drawing.Point(4, 86);
+            this.panel27.Margin = new System.Windows.Forms.Padding(4);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(457, 123);
+            this.panel27.TabIndex = 1;
+            // 
+            // panel28
+            // 
+            this.panel28.Controls.Add(this.txbIdSupplier);
+            this.panel28.Controls.Add(this.label10);
+            this.panel28.Controls.Add(this.panel29);
+            this.panel28.Location = new System.Drawing.Point(17, 4);
+            this.panel28.Margin = new System.Windows.Forms.Padding(4);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(255, 41);
+            this.panel28.TabIndex = 5;
+            // 
+            // txbIdSupplier
+            // 
+            this.txbIdSupplier.Enabled = false;
+            this.txbIdSupplier.Location = new System.Drawing.Point(100, 10);
+            this.txbIdSupplier.Margin = new System.Windows.Forms.Padding(4);
+            this.txbIdSupplier.Name = "txbIdSupplier";
+            this.txbIdSupplier.Size = new System.Drawing.Size(126, 22);
+            this.txbIdSupplier.TabIndex = 3;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(8, 14);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(23, 16);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "ID:";
+            // 
+            // panel29
+            // 
+            this.panel29.Location = new System.Drawing.Point(4, 86);
+            this.panel29.Margin = new System.Windows.Forms.Padding(4);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(457, 123);
+            this.panel29.TabIndex = 1;
+            // 
+            // panel30
+            // 
+            this.panel30.Controls.Add(this.txbTax);
+            this.panel30.Controls.Add(this.label11);
+            this.panel30.Controls.Add(this.panel31);
+            this.panel30.Location = new System.Drawing.Point(17, 298);
+            this.panel30.Margin = new System.Windows.Forms.Padding(4);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(256, 41);
+            this.panel30.TabIndex = 4;
+            // 
+            // txbTax
+            // 
+            this.txbTax.Location = new System.Drawing.Point(101, 10);
+            this.txbTax.Margin = new System.Windows.Forms.Padding(4);
+            this.txbTax.Name = "txbTax";
+            this.txbTax.Size = new System.Drawing.Size(126, 22);
+            this.txbTax.TabIndex = 3;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(8, 14);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(49, 16);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Mã tax:";
+            // 
+            // panel31
+            // 
+            this.panel31.Location = new System.Drawing.Point(4, 86);
+            this.panel31.Margin = new System.Windows.Forms.Padding(4);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(457, 123);
+            this.panel31.TabIndex = 1;
+            // 
+            // panel32
+            // 
+            this.panel32.Controls.Add(this.txbSupplierNumber);
+            this.panel32.Controls.Add(this.label12);
+            this.panel32.Controls.Add(this.panel33);
+            this.panel32.Location = new System.Drawing.Point(17, 200);
+            this.panel32.Margin = new System.Windows.Forms.Padding(4);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(255, 41);
+            this.panel32.TabIndex = 4;
+            // 
+            // txbSupplierNumber
+            // 
+            this.txbSupplierNumber.Location = new System.Drawing.Point(100, 7);
+            this.txbSupplierNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txbSupplierNumber.Name = "txbSupplierNumber";
+            this.txbSupplierNumber.Size = new System.Drawing.Size(126, 22);
+            this.txbSupplierNumber.TabIndex = 4;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(8, 14);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(85, 16);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "Số điện thoại";
+            // 
+            // panel33
+            // 
+            this.panel33.Location = new System.Drawing.Point(4, 86);
+            this.panel33.Margin = new System.Windows.Forms.Padding(4);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(457, 123);
+            this.panel33.TabIndex = 1;
+            // 
+            // panel34
+            // 
+            this.panel34.Controls.Add(this.txbSupplierEmail);
+            this.panel34.Controls.Add(this.label13);
+            this.panel34.Controls.Add(this.panel35);
+            this.panel34.Location = new System.Drawing.Point(17, 151);
+            this.panel34.Margin = new System.Windows.Forms.Padding(4);
+            this.panel34.Name = "panel34";
+            this.panel34.Size = new System.Drawing.Size(255, 41);
+            this.panel34.TabIndex = 4;
+            // 
+            // txbSupplierEmail
+            // 
+            this.txbSupplierEmail.Location = new System.Drawing.Point(100, 10);
+            this.txbSupplierEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txbSupplierEmail.Name = "txbSupplierEmail";
+            this.txbSupplierEmail.Size = new System.Drawing.Size(126, 22);
+            this.txbSupplierEmail.TabIndex = 3;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(8, 14);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(41, 16);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Email";
+            // 
+            // panel35
+            // 
+            this.panel35.Location = new System.Drawing.Point(4, 86);
+            this.panel35.Margin = new System.Windows.Forms.Padding(4);
+            this.panel35.Name = "panel35";
+            this.panel35.Size = new System.Drawing.Size(457, 123);
+            this.panel35.TabIndex = 1;
+            // 
+            // panel36
+            // 
+            this.panel36.Controls.Add(this.txbSupplierAddress);
+            this.panel36.Controls.Add(this.label14);
+            this.panel36.Controls.Add(this.panel37);
+            this.panel36.Location = new System.Drawing.Point(17, 102);
+            this.panel36.Margin = new System.Windows.Forms.Padding(4);
+            this.panel36.Name = "panel36";
+            this.panel36.Size = new System.Drawing.Size(255, 41);
+            this.panel36.TabIndex = 4;
+            // 
+            // txbSupplierAddress
+            // 
+            this.txbSupplierAddress.Location = new System.Drawing.Point(100, 10);
+            this.txbSupplierAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.txbSupplierAddress.Name = "txbSupplierAddress";
+            this.txbSupplierAddress.Size = new System.Drawing.Size(126, 22);
+            this.txbSupplierAddress.TabIndex = 3;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(8, 14);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(47, 16);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Địa chỉ";
+            // 
+            // panel37
+            // 
+            this.panel37.Location = new System.Drawing.Point(4, 86);
+            this.panel37.Margin = new System.Windows.Forms.Padding(4);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(457, 123);
+            this.panel37.TabIndex = 1;
+            // 
+            // panel38
+            // 
+            this.panel38.Controls.Add(this.txbSupplierName);
+            this.panel38.Controls.Add(this.label15);
+            this.panel38.Controls.Add(this.panel39);
+            this.panel38.Location = new System.Drawing.Point(17, 53);
+            this.panel38.Margin = new System.Windows.Forms.Padding(4);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(255, 41);
+            this.panel38.TabIndex = 4;
+            // 
+            // txbSupplierName
+            // 
+            this.txbSupplierName.Location = new System.Drawing.Point(100, 10);
+            this.txbSupplierName.Margin = new System.Windows.Forms.Padding(4);
+            this.txbSupplierName.Name = "txbSupplierName";
+            this.txbSupplierName.Size = new System.Drawing.Size(126, 22);
+            this.txbSupplierName.TabIndex = 3;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(8, 14);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(34, 16);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Tên:";
+            // 
+            // panel39
+            // 
+            this.panel39.Location = new System.Drawing.Point(4, 86);
+            this.panel39.Margin = new System.Windows.Forms.Padding(4);
+            this.panel39.Name = "panel39";
+            this.panel39.Size = new System.Drawing.Size(457, 123);
+            this.panel39.TabIndex = 1;
+            // 
+            // panel24
+            // 
+            this.panel24.Controls.Add(this.txbSearchSupplier);
+            this.panel24.Controls.Add(this.btnSearchSupplier);
+            this.panel24.Location = new System.Drawing.Point(594, 6);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(283, 44);
+            this.panel24.TabIndex = 5;
+            // 
+            // txbSearchSupplier
+            // 
+            this.txbSearchSupplier.Location = new System.Drawing.Point(16, 9);
+            this.txbSearchSupplier.Name = "txbSearchSupplier";
+            this.txbSearchSupplier.Size = new System.Drawing.Size(171, 22);
+            this.txbSearchSupplier.TabIndex = 4;
+            // 
+            // btnSearchSupplier
+            // 
+            this.btnSearchSupplier.Location = new System.Drawing.Point(191, 0);
+            this.btnSearchSupplier.Name = "btnSearchSupplier";
+            this.btnSearchSupplier.Size = new System.Drawing.Size(89, 41);
+            this.btnSearchSupplier.TabIndex = 3;
+            this.btnSearchSupplier.Text = "Tìm";
+            this.btnSearchSupplier.UseVisualStyleBackColor = true;
+            this.btnSearchSupplier.Click += new System.EventHandler(this.btnSearchSupplier_Click);
+            // 
+            // dtgvSupplier
+            // 
+            this.dtgvSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvSupplier.Location = new System.Drawing.Point(6, 56);
+            this.dtgvSupplier.Name = "dtgvSupplier";
+            this.dtgvSupplier.RowHeadersWidth = 51;
+            this.dtgvSupplier.RowTemplate.Height = 24;
+            this.dtgvSupplier.Size = new System.Drawing.Size(576, 388);
+            this.dtgvSupplier.TabIndex = 4;
+            // 
+            // panel23
+            // 
+            this.panel23.Controls.Add(this.btnDeleteSupplier);
+            this.panel23.Controls.Add(this.btnUpdateSupplier);
+            this.panel23.Controls.Add(this.btnAllSupplier);
+            this.panel23.Controls.Add(this.btnAddSupplier);
+            this.panel23.Location = new System.Drawing.Point(6, 6);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(576, 44);
+            this.panel23.TabIndex = 3;
+            // 
+            // btnDeleteSupplier
+            // 
+            this.btnDeleteSupplier.Location = new System.Drawing.Point(438, 0);
+            this.btnDeleteSupplier.Name = "btnDeleteSupplier";
+            this.btnDeleteSupplier.Size = new System.Drawing.Size(135, 41);
+            this.btnDeleteSupplier.TabIndex = 3;
+            this.btnDeleteSupplier.Text = "Xóa";
+            this.btnDeleteSupplier.UseVisualStyleBackColor = true;
+            this.btnDeleteSupplier.Click += new System.EventHandler(this.btnDeleteSupplier_Click);
+            // 
+            // btnUpdateSupplier
+            // 
+            this.btnUpdateSupplier.Location = new System.Drawing.Point(283, 0);
+            this.btnUpdateSupplier.Name = "btnUpdateSupplier";
+            this.btnUpdateSupplier.Size = new System.Drawing.Size(145, 41);
+            this.btnUpdateSupplier.TabIndex = 2;
+            this.btnUpdateSupplier.Text = "Sửa";
+            this.btnUpdateSupplier.UseVisualStyleBackColor = true;
+            this.btnUpdateSupplier.Click += new System.EventHandler(this.btnUpdateSupplier_Click);
+            // 
+            // btnAllSupplier
+            // 
+            this.btnAllSupplier.Location = new System.Drawing.Point(136, 0);
+            this.btnAllSupplier.Name = "btnAllSupplier";
+            this.btnAllSupplier.Size = new System.Drawing.Size(141, 41);
+            this.btnAllSupplier.TabIndex = 1;
+            this.btnAllSupplier.Text = "Xem tất cả";
+            this.btnAllSupplier.UseVisualStyleBackColor = true;
+            this.btnAllSupplier.Click += new System.EventHandler(this.btnAllSupplier_Click);
+            // 
+            // btnAddSupplier
+            // 
+            this.btnAddSupplier.Location = new System.Drawing.Point(3, 0);
+            this.btnAddSupplier.Name = "btnAddSupplier";
+            this.btnAddSupplier.Size = new System.Drawing.Size(127, 41);
+            this.btnAddSupplier.TabIndex = 0;
+            this.btnAddSupplier.Text = "Thêm";
+            this.btnAddSupplier.UseVisualStyleBackColor = true;
+            this.btnAddSupplier.Click += new System.EventHandler(this.btnAddSupplier_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.button2);
+            this.tabPage3.Controls.Add(this.txbIdBookEntry);
+            this.tabPage3.Controls.Add(this.label19);
+            this.tabPage3.Controls.Add(this.dtgvBookEntryDetail);
+            this.tabPage3.Controls.Add(this.dtgvBookEntry);
+            this.tabPage3.Controls.Add(this.panel40);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(917, 458);
+            this.tabPage3.TabIndex = 3;
+            this.tabPage3.Text = "Đơn nhập sách";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(723, 139);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(164, 41);
+            this.button2.TabIndex = 26;
+            this.button2.Text = "Xem thông tin đơn nhập";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // txbIdBookEntry
+            // 
+            this.txbIdBookEntry.Enabled = false;
+            this.txbIdBookEntry.Location = new System.Drawing.Point(856, 97);
+            this.txbIdBookEntry.Margin = new System.Windows.Forms.Padding(4);
+            this.txbIdBookEntry.Name = "txbIdBookEntry";
+            this.txbIdBookEntry.Size = new System.Drawing.Size(49, 22);
+            this.txbIdBookEntry.TabIndex = 25;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(720, 100);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(130, 16);
+            this.label19.TabIndex = 24;
+            this.label19.Text = "ID đơn nhập đã chọn";
+            // 
+            // dtgvBookEntryDetail
+            // 
+            this.dtgvBookEntryDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvBookEntryDetail.Location = new System.Drawing.Point(3, 252);
+            this.dtgvBookEntryDetail.Name = "dtgvBookEntryDetail";
+            this.dtgvBookEntryDetail.RowHeadersWidth = 51;
+            this.dtgvBookEntryDetail.RowTemplate.Height = 24;
+            this.dtgvBookEntryDetail.Size = new System.Drawing.Size(711, 200);
+            this.dtgvBookEntryDetail.TabIndex = 4;
+            // 
+            // dtgvBookEntry
+            // 
+            this.dtgvBookEntry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvBookEntry.Location = new System.Drawing.Point(3, 43);
+            this.dtgvBookEntry.Name = "dtgvBookEntry";
+            this.dtgvBookEntry.RowHeadersWidth = 51;
+            this.dtgvBookEntry.RowTemplate.Height = 24;
+            this.dtgvBookEntry.Size = new System.Drawing.Size(711, 202);
+            this.dtgvBookEntry.TabIndex = 3;
+            // 
+            // panel40
+            // 
+            this.panel40.Controls.Add(this.label17);
+            this.panel40.Controls.Add(this.button3);
+            this.panel40.Controls.Add(this.dtpkToDateBookEntry);
+            this.panel40.Controls.Add(this.dtpkFromDateBookEntry);
+            this.panel40.Location = new System.Drawing.Point(3, 6);
+            this.panel40.Name = "panel40";
+            this.panel40.Size = new System.Drawing.Size(711, 31);
+            this.panel40.TabIndex = 2;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(229, 8);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(63, 16);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "đến ngày";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(545, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(115, 28);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Tìm";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // dtpkToDateBookEntry
+            // 
+            this.dtpkToDateBookEntry.Location = new System.Drawing.Point(327, 6);
+            this.dtpkToDateBookEntry.Name = "dtpkToDateBookEntry";
+            this.dtpkToDateBookEntry.Size = new System.Drawing.Size(200, 22);
+            this.dtpkToDateBookEntry.TabIndex = 1;
+            // 
+            // dtpkFromDateBookEntry
+            // 
+            this.dtpkFromDateBookEntry.Location = new System.Drawing.Point(3, 3);
+            this.dtpkFromDateBookEntry.Name = "dtpkFromDateBookEntry";
+            this.dtpkFromDateBookEntry.Size = new System.Drawing.Size(200, 22);
+            this.dtpkFromDateBookEntry.TabIndex = 0;
+            // 
             // btnPayCheck
             // 
             this.btnPayCheck.Location = new System.Drawing.Point(704, 12);
@@ -640,32 +1248,46 @@
             // 
             // chứcNăngToolStripMenuItem
             // 
-            this.chứcNăngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thêmNhânViênToolStripMenuItem});
             this.chứcNăngToolStripMenuItem.Name = "chứcNăngToolStripMenuItem";
-            this.chứcNăngToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
-            this.chứcNăngToolStripMenuItem.Text = "Chức năng";
+            this.chứcNăngToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
+            this.chứcNăngToolStripMenuItem.Text = "Admin";
+            this.chứcNăngToolStripMenuItem.Click += new System.EventHandler(this.chứcNăngToolStripMenuItem_Click);
             // 
-            // thêmNhânViênToolStripMenuItem
+            // btnEntryBook
             // 
-            this.thêmNhânViênToolStripMenuItem.Name = "thêmNhânViênToolStripMenuItem";
-            this.thêmNhânViênToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
-            this.thêmNhânViênToolStripMenuItem.Text = "Thêm nhân viên";
+            this.btnEntryBook.Location = new System.Drawing.Point(515, 12);
+            this.btnEntryBook.Name = "btnEntryBook";
+            this.btnEntryBook.Size = new System.Drawing.Size(183, 41);
+            this.btnEntryBook.TabIndex = 7;
+            this.btnEntryBook.Text = "Nhập sách";
+            this.btnEntryBook.UseVisualStyleBackColor = true;
+            this.btnEntryBook.Click += new System.EventHandler(this.btnEntryBook_Click);
             // 
-            // btnDeleteBook
+            // cbSupplier
             // 
-            this.btnDeleteBook.Location = new System.Drawing.Point(438, 0);
-            this.btnDeleteBook.Name = "btnDeleteBook";
-            this.btnDeleteBook.Size = new System.Drawing.Size(135, 41);
-            this.btnDeleteBook.TabIndex = 3;
-            this.btnDeleteBook.Text = "Xóa";
-            this.btnDeleteBook.UseVisualStyleBackColor = true;
+            this.cbSupplier.FormattingEnabled = true;
+            this.cbSupplier.Location = new System.Drawing.Point(305, 21);
+            this.cbSupplier.Name = "cbSupplier";
+            this.cbSupplier.Size = new System.Drawing.Size(200, 24);
+            this.cbSupplier.TabIndex = 21;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(169, 24);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(121, 16);
+            this.label16.TabIndex = 22;
+            this.label16.Text = "Chọn nhà cung cấp";
             // 
             // fBookManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(937, 551);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.cbSupplier);
+            this.Controls.Add(this.btnEntryBook);
             this.Controls.Add(this.btnPayCheck);
             this.Controls.Add(this.tcManager);
             this.Controls.Add(this.menuStrip1);
@@ -674,9 +1296,11 @@
             this.Name = "fBookManager";
             this.Text = "Quản lý chung";
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvInvoiceDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvInvoice)).EndInit();
             this.tcManager.ResumeLayout(false);
             this.tab1.ResumeLayout(false);
@@ -705,6 +1329,32 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudPriceBook)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBook)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.panel25.ResumeLayout(false);
+            this.panel26.ResumeLayout(false);
+            this.panel26.PerformLayout();
+            this.panel28.ResumeLayout(false);
+            this.panel28.PerformLayout();
+            this.panel30.ResumeLayout(false);
+            this.panel30.PerformLayout();
+            this.panel32.ResumeLayout(false);
+            this.panel32.PerformLayout();
+            this.panel34.ResumeLayout(false);
+            this.panel34.PerformLayout();
+            this.panel36.ResumeLayout(false);
+            this.panel36.PerformLayout();
+            this.panel38.ResumeLayout(false);
+            this.panel38.PerformLayout();
+            this.panel24.ResumeLayout(false);
+            this.panel24.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvSupplier)).EndInit();
+            this.panel23.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvBookEntryDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvBookEntry)).EndInit();
+            this.panel40.ResumeLayout(false);
+            this.panel40.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -769,7 +1419,63 @@
         private System.Windows.Forms.Button btnPayCheck;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem chứcNăngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thêmNhânViênToolStripMenuItem;
         private System.Windows.Forms.Button btnDeleteBook;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.TextBox txbIdSupplier;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.TextBox txbTax;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel31;
+        private System.Windows.Forms.Panel panel32;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel33;
+        private System.Windows.Forms.Panel panel34;
+        private System.Windows.Forms.TextBox txbSupplierEmail;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel35;
+        private System.Windows.Forms.Panel panel36;
+        private System.Windows.Forms.TextBox txbSupplierAddress;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel37;
+        private System.Windows.Forms.Panel panel38;
+        private System.Windows.Forms.TextBox txbSupplierName;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel39;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.TextBox txbSearchSupplier;
+        private System.Windows.Forms.Button btnSearchSupplier;
+        private System.Windows.Forms.DataGridView dtgvSupplier;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Button btnDeleteSupplier;
+        private System.Windows.Forms.Button btnUpdateSupplier;
+        private System.Windows.Forms.Button btnAllSupplier;
+        private System.Windows.Forms.Button btnAddSupplier;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.TextBox txbBank;
+        private System.Windows.Forms.TextBox txbSupplierNumber;
+        private System.Windows.Forms.Button btnEntryBook;
+        private System.Windows.Forms.ComboBox cbSupplier;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TextBox txbIdInvoice;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Panel panel40;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DateTimePicker dtpkToDateBookEntry;
+        private System.Windows.Forms.DateTimePicker dtpkFromDateBookEntry;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dtgvInvoiceDetail;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txbIdBookEntry;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.DataGridView dtgvBookEntryDetail;
+        private System.Windows.Forms.DataGridView dtgvBookEntry;
     }
 }

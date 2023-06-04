@@ -1,8 +1,11 @@
 ﻿using BookStoreManagement.DTO;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -59,6 +62,44 @@ namespace BookStoreManagement.DAO
         {
             string query = string.Format("INSERT Book ( title, author, publisher, publish_year, stock, category, price ) VALUES  ( N'{0}', N'{1}', N'{2}', {3}, {4}, N'{5}', {6})",
                 title, author, publisher, publish_year, stock, category, price);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+
+        public bool CheckStockByBookId(int book_id, int stock)
+        {
+            string query = string.Format("select stock from book where id = {0}", book_id);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                return (int)item["stock"] >= stock;
+            }
+
+            return false;
+        }
+
+        public bool DecreaseStockByBookId(int book_id, int stock)
+        {
+            if (CheckStockByBookId(book_id,stock))
+            {
+                string query = string.Format("UPDATE Book SET stock = stock - {0} WHERE id = {1}",
+            stock, book_id);
+                int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+                return result > 0;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool IncreaseStockByBookId(int book_id, int stock)
+        {
+            string query = string.Format("UPDATE Book SET stock = stock + {0}  WHERE id = {1}",
+            stock, book_id);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;

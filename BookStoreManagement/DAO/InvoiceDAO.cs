@@ -80,6 +80,14 @@ namespace BookStoreManagement.DAO
             return -1;
         }
 
+        public bool UpdateInvoiceCheck(int invoiceId, int totalPrice)
+        {
+            string query = string.Format("UPDATE Invoice SET status = N'checked', amount_invoice = {0} WHERE id = {1}", totalPrice, invoiceId);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+
         public DataTable GetInvoiceListByDate(DateTime fromDate, DateTime toDate)
         {
             string query = string.Format("SELECT * FROM invoice WHERE date_invoice >= N'{0}' AND date_invoice <= N'{1}'", fromDate, toDate);

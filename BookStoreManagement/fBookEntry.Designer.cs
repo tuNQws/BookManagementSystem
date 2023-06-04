@@ -1,6 +1,6 @@
 ﻿namespace BookStoreManagement
 {
-    partial class fCashier
+    partial class fBookEntry
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.txbSearchBook = new System.Windows.Forms.TextBox();
+            this.btnSearchBook = new System.Windows.Forms.Button();
+            this.dtgvBook = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.txbQuantity = new System.Windows.Forms.TextBox();
@@ -41,31 +45,62 @@
             this.txbIdBook = new System.Windows.Forms.TextBox();
             this.txbTitle = new System.Windows.Forms.TextBox();
             this.nudNumber = new System.Windows.Forms.NumericUpDown();
-            this.btnAddToInvoice = new System.Windows.Forms.Button();
-            this.btnDeleteFromInvoice = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dtgvInvoiceDetail = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.dtgvBook = new System.Windows.Forms.DataGridView();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.txbSearchBook = new System.Windows.Forms.TextBox();
-            this.btnSearchBook = new System.Windows.Forms.Button();
+            this.btnAddToBookEntry = new System.Windows.Forms.Button();
+            this.btnDeleteFromBookEntry = new System.Windows.Forms.Button();
+            this.dtgvBookEntryDetail = new System.Windows.Forms.DataGridView();
             this.btnPayCheck = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.txbIdInvoice = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txbIdBookEntry = new System.Windows.Forms.TextBox();
             this.txbEmployeeName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dtpkInvoiceDate = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.txbTotalAmount = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txbSupplier = new System.Windows.Forms.TextBox();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvBook)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumber)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvInvoiceDetail)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvBook)).BeginInit();
-            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvBookEntryDetail)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.txbSearchBook);
+            this.panel6.Controls.Add(this.btnSearchBook);
+            this.panel6.Location = new System.Drawing.Point(12, 12);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(378, 44);
+            this.panel6.TabIndex = 5;
+            // 
+            // txbSearchBook
+            // 
+            this.txbSearchBook.Location = new System.Drawing.Point(16, 9);
+            this.txbSearchBook.Name = "txbSearchBook";
+            this.txbSearchBook.Size = new System.Drawing.Size(264, 22);
+            this.txbSearchBook.TabIndex = 4;
+            // 
+            // btnSearchBook
+            // 
+            this.btnSearchBook.Location = new System.Drawing.Point(286, 3);
+            this.btnSearchBook.Name = "btnSearchBook";
+            this.btnSearchBook.Size = new System.Drawing.Size(89, 41);
+            this.btnSearchBook.TabIndex = 3;
+            this.btnSearchBook.Text = "Tìm sách";
+            this.btnSearchBook.UseVisualStyleBackColor = true;
+            this.btnSearchBook.Click += new System.EventHandler(this.btnSearchBook_Click);
+            // 
+            // dtgvBook
+            // 
+            this.dtgvBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvBook.Location = new System.Drawing.Point(12, 62);
+            this.dtgvBook.Name = "dtgvBook";
+            this.dtgvBook.RowHeadersWidth = 51;
+            this.dtgvBook.RowTemplate.Height = 24;
+            this.dtgvBook.Size = new System.Drawing.Size(378, 452);
+            this.dtgvBook.TabIndex = 6;
             // 
             // panel1
             // 
@@ -81,12 +116,12 @@
             this.panel1.Controls.Add(this.txbIdBook);
             this.panel1.Controls.Add(this.txbTitle);
             this.panel1.Controls.Add(this.nudNumber);
-            this.panel1.Controls.Add(this.btnAddToInvoice);
-            this.panel1.Controls.Add(this.btnDeleteFromInvoice);
+            this.panel1.Controls.Add(this.btnAddToBookEntry);
+            this.panel1.Controls.Add(this.btnDeleteFromBookEntry);
             this.panel1.Location = new System.Drawing.Point(396, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(540, 120);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 7;
             // 
             // label9
             // 
@@ -162,7 +197,6 @@
             // 
             this.txbPrice.Location = new System.Drawing.Point(241, 12);
             this.txbPrice.Name = "txbPrice";
-            this.txbPrice.ReadOnly = true;
             this.txbPrice.Size = new System.Drawing.Size(105, 22);
             this.txbPrice.TabIndex = 5;
             // 
@@ -194,198 +228,165 @@
             0,
             0});
             // 
-            // btnAddToInvoice
+            // btnAddToBookEntry
             // 
-            this.btnAddToInvoice.Location = new System.Drawing.Point(302, 52);
-            this.btnAddToInvoice.Name = "btnAddToInvoice";
-            this.btnAddToInvoice.Size = new System.Drawing.Size(103, 65);
-            this.btnAddToInvoice.TabIndex = 1;
-            this.btnAddToInvoice.Text = "Thêm vào hóa đơn";
-            this.btnAddToInvoice.UseVisualStyleBackColor = true;
-            this.btnAddToInvoice.Click += new System.EventHandler(this.btnAddToInvoice_Click);
+            this.btnAddToBookEntry.Location = new System.Drawing.Point(302, 52);
+            this.btnAddToBookEntry.Name = "btnAddToBookEntry";
+            this.btnAddToBookEntry.Size = new System.Drawing.Size(103, 65);
+            this.btnAddToBookEntry.TabIndex = 1;
+            this.btnAddToBookEntry.Text = "Thêm vào đơn nhập";
+            this.btnAddToBookEntry.UseVisualStyleBackColor = true;
+            this.btnAddToBookEntry.Click += new System.EventHandler(this.btnAddToBookEntry_Click);
             // 
-            // btnDeleteFromInvoice
+            // btnDeleteFromBookEntry
             // 
-            this.btnDeleteFromInvoice.Location = new System.Drawing.Point(418, 52);
-            this.btnDeleteFromInvoice.Name = "btnDeleteFromInvoice";
-            this.btnDeleteFromInvoice.Size = new System.Drawing.Size(104, 65);
-            this.btnDeleteFromInvoice.TabIndex = 0;
-            this.btnDeleteFromInvoice.Text = "Bỏ khỏi hóa đơn";
-            this.btnDeleteFromInvoice.UseVisualStyleBackColor = true;
-            this.btnDeleteFromInvoice.Click += new System.EventHandler(this.btnDeleteFromInvoice_Click);
+            this.btnDeleteFromBookEntry.Location = new System.Drawing.Point(418, 52);
+            this.btnDeleteFromBookEntry.Name = "btnDeleteFromBookEntry";
+            this.btnDeleteFromBookEntry.Size = new System.Drawing.Size(104, 65);
+            this.btnDeleteFromBookEntry.TabIndex = 0;
+            this.btnDeleteFromBookEntry.Text = "Bỏ khỏi đơn nhập";
+            this.btnDeleteFromBookEntry.UseVisualStyleBackColor = true;
+            this.btnDeleteFromBookEntry.Click += new System.EventHandler(this.btnDeleteFromBookEntry_Click);
             // 
-            // panel2
+            // dtgvBookEntryDetail
             // 
-            this.panel2.Location = new System.Drawing.Point(396, 138);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(540, 384);
-            this.panel2.TabIndex = 1;
-            // 
-            // dtgvInvoiceDetail
-            // 
-            this.dtgvInvoiceDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvInvoiceDetail.Location = new System.Drawing.Point(396, 138);
-            this.dtgvInvoiceDetail.Name = "dtgvInvoiceDetail";
-            this.dtgvInvoiceDetail.RowHeadersWidth = 51;
-            this.dtgvInvoiceDetail.RowTemplate.Height = 24;
-            this.dtgvInvoiceDetail.Size = new System.Drawing.Size(540, 384);
-            this.dtgvInvoiceDetail.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.dtgvBook);
-            this.panel4.Location = new System.Drawing.Point(12, 67);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(378, 455);
-            this.panel4.TabIndex = 2;
-            // 
-            // dtgvBook
-            // 
-            this.dtgvBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvBook.Location = new System.Drawing.Point(0, 3);
-            this.dtgvBook.Name = "dtgvBook";
-            this.dtgvBook.RowHeadersWidth = 51;
-            this.dtgvBook.RowTemplate.Height = 24;
-            this.dtgvBook.Size = new System.Drawing.Size(378, 452);
-            this.dtgvBook.TabIndex = 0;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.txbSearchBook);
-            this.panel6.Controls.Add(this.btnSearchBook);
-            this.panel6.Location = new System.Drawing.Point(12, 12);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(378, 44);
-            this.panel6.TabIndex = 4;
-            // 
-            // txbSearchBook
-            // 
-            this.txbSearchBook.Location = new System.Drawing.Point(16, 9);
-            this.txbSearchBook.Name = "txbSearchBook";
-            this.txbSearchBook.Size = new System.Drawing.Size(264, 22);
-            this.txbSearchBook.TabIndex = 4;
-            // 
-            // btnSearchBook
-            // 
-            this.btnSearchBook.Location = new System.Drawing.Point(286, 3);
-            this.btnSearchBook.Name = "btnSearchBook";
-            this.btnSearchBook.Size = new System.Drawing.Size(89, 41);
-            this.btnSearchBook.TabIndex = 3;
-            this.btnSearchBook.Text = "Tìm sách";
-            this.btnSearchBook.UseVisualStyleBackColor = true;
-            this.btnSearchBook.Click += new System.EventHandler(this.btnSearchBook_Click);
+            this.dtgvBookEntryDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvBookEntryDetail.Location = new System.Drawing.Point(396, 138);
+            this.dtgvBookEntryDetail.Name = "dtgvBookEntryDetail";
+            this.dtgvBookEntryDetail.RowHeadersWidth = 51;
+            this.dtgvBookEntryDetail.RowTemplate.Height = 24;
+            this.dtgvBookEntryDetail.Size = new System.Drawing.Size(540, 376);
+            this.dtgvBookEntryDetail.TabIndex = 8;
             // 
             // btnPayCheck
             // 
-            this.btnPayCheck.Location = new System.Drawing.Point(795, 528);
+            this.btnPayCheck.Location = new System.Drawing.Point(814, 527);
             this.btnPayCheck.Name = "btnPayCheck";
             this.btnPayCheck.Size = new System.Drawing.Size(123, 65);
-            this.btnPayCheck.TabIndex = 9;
-            this.btnPayCheck.Text = "Thanh toán";
+            this.btnPayCheck.TabIndex = 10;
+            this.btnPayCheck.Text = "Xác nhận nhập";
             this.btnPayCheck.UseVisualStyleBackColor = true;
-            this.btnPayCheck.Click += new System.EventHandler(this.btnPayCheck_Click);
+            this.btnPayCheck.Click += new System.EventHandler(this.btnPayCheck_Click_1);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 537);
+            this.label4.Location = new System.Drawing.Point(16, 538);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 16);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "ID hóa đơn:";
-            // 
-            // txbIdInvoice
-            // 
-            this.txbIdInvoice.Enabled = false;
-            this.txbIdInvoice.Location = new System.Drawing.Point(93, 534);
-            this.txbIdInvoice.Name = "txbIdInvoice";
-            this.txbIdInvoice.ReadOnly = true;
-            this.txbIdInvoice.Size = new System.Drawing.Size(57, 22);
-            this.txbIdInvoice.TabIndex = 9;
+            this.label4.Size = new System.Drawing.Size(82, 16);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "ID đơn nhập:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 568);
+            this.label5.Location = new System.Drawing.Point(16, 570);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 16);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Nhân viên tạo:";
+            this.label5.Size = new System.Drawing.Size(103, 16);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Nhân viên nhập:";
+            // 
+            // txbIdBookEntry
+            // 
+            this.txbIdBookEntry.Enabled = false;
+            this.txbIdBookEntry.Location = new System.Drawing.Point(125, 535);
+            this.txbIdBookEntry.Name = "txbIdBookEntry";
+            this.txbIdBookEntry.ReadOnly = true;
+            this.txbIdBookEntry.Size = new System.Drawing.Size(57, 22);
+            this.txbIdBookEntry.TabIndex = 13;
             // 
             // txbEmployeeName
             // 
             this.txbEmployeeName.Enabled = false;
-            this.txbEmployeeName.Location = new System.Drawing.Point(110, 565);
+            this.txbEmployeeName.Location = new System.Drawing.Point(125, 567);
             this.txbEmployeeName.Name = "txbEmployeeName";
             this.txbEmployeeName.ReadOnly = true;
             this.txbEmployeeName.Size = new System.Drawing.Size(120, 22);
-            this.txbEmployeeName.TabIndex = 11;
+            this.txbEmployeeName.TabIndex = 14;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(248, 537);
+            this.label6.Location = new System.Drawing.Point(263, 541);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 16);
-            this.label6.TabIndex = 12;
+            this.label6.TabIndex = 15;
             this.label6.Text = "Ngày tạo:";
             // 
             // dtpkInvoiceDate
             // 
             this.dtpkInvoiceDate.Enabled = false;
-            this.dtpkInvoiceDate.Location = new System.Drawing.Point(329, 534);
+            this.dtpkInvoiceDate.Location = new System.Drawing.Point(359, 538);
             this.dtpkInvoiceDate.Name = "dtpkInvoiceDate";
             this.dtpkInvoiceDate.Size = new System.Drawing.Size(200, 22);
-            this.dtpkInvoiceDate.TabIndex = 13;
+            this.dtpkInvoiceDate.TabIndex = 16;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(585, 555);
+            this.label7.Location = new System.Drawing.Point(586, 557);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 16);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Tổng hóa đơn:";
+            this.label7.Size = new System.Drawing.Size(115, 16);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Tổng đơn nhập:";
             // 
             // txbTotalAmount
             // 
             this.txbTotalAmount.Enabled = false;
-            this.txbTotalAmount.Location = new System.Drawing.Point(698, 552);
+            this.txbTotalAmount.Location = new System.Drawing.Point(707, 551);
             this.txbTotalAmount.Name = "txbTotalAmount";
             this.txbTotalAmount.ReadOnly = true;
             this.txbTotalAmount.Size = new System.Drawing.Size(71, 22);
-            this.txbTotalAmount.TabIndex = 15;
+            this.txbTotalAmount.TabIndex = 18;
             // 
-            // fCashier
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(263, 576);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(93, 16);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Nhà cung cấp:";
+            // 
+            // txbSupplier
+            // 
+            this.txbSupplier.Enabled = false;
+            this.txbSupplier.Location = new System.Drawing.Point(377, 570);
+            this.txbSupplier.Name = "txbSupplier";
+            this.txbSupplier.ReadOnly = true;
+            this.txbSupplier.Size = new System.Drawing.Size(120, 22);
+            this.txbSupplier.TabIndex = 20;
+            // 
+            // fBookEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(948, 602);
+            this.ClientSize = new System.Drawing.Size(946, 604);
+            this.Controls.Add(this.txbSupplier);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.txbTotalAmount);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dtpkInvoiceDate);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txbEmployeeName);
+            this.Controls.Add(this.txbIdBookEntry);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txbIdInvoice);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnPayCheck);
-            this.Controls.Add(this.dtgvInvoiceDetail);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.dtgvBookEntryDetail);
             this.Controls.Add(this.panel1);
-            this.Name = "fCashier";
-            this.Text = "fCashier";
+            this.Controls.Add(this.dtgvBook);
+            this.Controls.Add(this.panel6);
+            this.Name = "fBookEntry";
+            this.Text = "fBookEntry";
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvBook)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumber)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvInvoiceDetail)).EndInit();
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvBook)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvBookEntryDetail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,36 +394,36 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnDeleteFromInvoice;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnAddToInvoice;
-        private System.Windows.Forms.DataGridView dtgvBook;
-        private System.Windows.Forms.DataGridView dtgvInvoiceDetail;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox txbSearchBook;
         private System.Windows.Forms.Button btnSearchBook;
-        private System.Windows.Forms.NumericUpDown nudNumber;
-        private System.Windows.Forms.TextBox txbPrice;
-        private System.Windows.Forms.TextBox txbIdBook;
-        private System.Windows.Forms.TextBox txbTitle;
+        private System.Windows.Forms.DataGridView dtgvBook;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txbQuantity;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txbBookIdDelete;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txbPrice;
+        private System.Windows.Forms.TextBox txbIdBook;
+        private System.Windows.Forms.TextBox txbTitle;
+        private System.Windows.Forms.NumericUpDown nudNumber;
+        private System.Windows.Forms.Button btnAddToBookEntry;
+        private System.Windows.Forms.Button btnDeleteFromBookEntry;
+        private System.Windows.Forms.DataGridView dtgvBookEntryDetail;
         private System.Windows.Forms.Button btnPayCheck;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txbIdInvoice;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txbIdBookEntry;
         private System.Windows.Forms.TextBox txbEmployeeName;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dtpkInvoiceDate;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txbTotalAmount;
-        private System.Windows.Forms.TextBox txbBookIdDelete;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txbQuantity;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txbSupplier;
     }
 }

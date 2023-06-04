@@ -36,6 +36,36 @@ namespace BookStoreManagement.DAO
 
             return list;
         }
+        public string GetSupplierNameWithBookEntryId(int book_entry_id)
+        {
+            string query = string.Format("select * from supplier as s, book_entry as b where s.id = b.supplier_id AND b.id = {0}", book_entry_id);
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                return (string)item["sup_name"];
+            }
+            return "";
+        }
+        
+        public List<Supplier> SearchSupplierByName(string name)
+        {
+
+            List<Supplier> list = new List<Supplier>();
+
+            string query = string.Format("SELECT * FROM Supplier WHERE dbo.fuConvertToUnsign1(sup_name) LIKE N'%' + dbo.fuConvertToUnsign1(N'{0}') + '%'", name);
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Supplier food = new Supplier(item);
+                list.Add(food);
+            }
+
+            return list;
+        }
 
         public bool InsertSupplier(string sup_name, string sup_address, string sup_email, string sup_phone, string sup_bank, string sup_tax_code)
         {
@@ -48,7 +78,7 @@ namespace BookStoreManagement.DAO
 
         public bool UpdateSupplier(int id, string sup_name, string sup_address, string sup_email, string sup_phone, string sup_bank, string sup_tax_code)
         {
-            string query = string.Format("UPDATE Supplier SET sup_name = N'{0}', sup_address = {1}, sup_email = {2}, sup_phone = {3}, sup_bank = {4}  WHERE id = {5}",
+            string query = string.Format("UPDATE Supplier SET sup_name = N'{0}', sup_address = N'{1}', sup_email = N'{2}', sup_phone = N'{3}', sup_bank = N'{4}', sup_tax_code = N'{5}'  WHERE id = {6}",
                 sup_name, sup_address, sup_email, sup_phone, sup_bank, sup_tax_code, id);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 

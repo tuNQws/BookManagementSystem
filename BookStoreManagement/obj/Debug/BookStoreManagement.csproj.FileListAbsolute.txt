@@ -11,3 +11,5 @@ C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.exe
 C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.pdb
 C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.fBookManager.resources
 C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.fCashier.resources
+C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.fAdmin.resources
+C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.fBookEntry.resources
