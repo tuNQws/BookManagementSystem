@@ -65,7 +65,7 @@ namespace BookStoreManagement.DAO
 
         public DataTable GetBookEntryListByDate(DateTime fromDate, DateTime toDate)
         {
-            string query = string.Format("SELECT * FROM book_entry WHERE date_entry >= N'{0}' AND date_entry <= N'{1}'", fromDate, toDate);
+            string query = string.Format("SELECT * FROM book_entry WHERE date_entry >= N'{0}' AND date_entry <= N'{1}' AND status = N'checked'", fromDate, toDate);
             return DataProvider.Instance.ExecuteQuery(query);
         }
 

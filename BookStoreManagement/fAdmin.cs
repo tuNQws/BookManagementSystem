@@ -68,25 +68,12 @@ namespace BookStoreManagement
 
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
-            string firstName = txbEmployeeFirstName.Text;
-            string lastName = txbEmployeeLastName.Text;
-            string username = txbEmployeeUsername.Text;
-            string password = txbPassword.Text;
-            string email = txbEmail.Text;
-
-            if (AccountDAO.Instance.InsertAccount(username, password, email) 
-                && EmployeeDAO.Instance.InsertEmployee(firstName, lastName, username))
-            {
-                MessageBox.Show("Thêm nhân viên và tài khoản thành công");
-                LoadListEmployee();
-                LoadListAccount();
-                if (insertEmployee != null)
-                    insertEmployee(this, new EventArgs());
-            }
-            else
-            {
-                MessageBox.Show("Có lỗi khi thêm nhân viên");
-            }
+            fAddEmployee f = new fAddEmployee();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+            LoadListEmployee();
+            LoadListAccount();
         }
 
         private void btnGetAllEmployee_Click(object sender, EventArgs e)
@@ -122,16 +109,16 @@ namespace BookStoreManagement
 
         #endregion
 
-        private event EventHandler insertEmployee;
-        public event EventHandler InsertEmployee
-        {
-            add { insertEmployee += value; }
-            remove { insertEmployee -= value; }
-        }
+        
 
         private void btnSearchAccount_Click(object sender, EventArgs e)
         {
             dtgvAccount.DataSource = SearchAccountByUsername(txbSearchAccount.Text);
+        }
+
+        private void btnBanAccount_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

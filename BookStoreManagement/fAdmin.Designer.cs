@@ -35,6 +35,10 @@
             this.dtgvAccount = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.txbEmployeeLastName = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txbEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,10 +56,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.txbEmployeeLastName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel16 = new System.Windows.Forms.Panel();
             this.txbEmployeeFirstName = new System.Windows.Forms.TextBox();
             this.Title = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -74,12 +74,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel15.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.panel15.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvEmployee)).BeginInit();
             this.panel5.SuspendLayout();
@@ -160,6 +160,43 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(283, 388);
             this.panel4.TabIndex = 6;
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.txbEmployeeLastName);
+            this.panel15.Controls.Add(this.label5);
+            this.panel15.Controls.Add(this.panel16);
+            this.panel15.Location = new System.Drawing.Point(17, 102);
+            this.panel15.Margin = new System.Windows.Forms.Padding(4);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(255, 41);
+            this.panel15.TabIndex = 5;
+            // 
+            // txbEmployeeLastName
+            // 
+            this.txbEmployeeLastName.Location = new System.Drawing.Point(100, 10);
+            this.txbEmployeeLastName.Margin = new System.Windows.Forms.Padding(4);
+            this.txbEmployeeLastName.Name = "txbEmployeeLastName";
+            this.txbEmployeeLastName.Size = new System.Drawing.Size(126, 22);
+            this.txbEmployeeLastName.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(8, 14);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(34, 16);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Tên:";
+            // 
+            // panel16
+            // 
+            this.panel16.Location = new System.Drawing.Point(4, 86);
+            this.panel16.Margin = new System.Windows.Forms.Padding(4);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(457, 123);
+            this.panel16.TabIndex = 1;
             // 
             // panel2
             // 
@@ -322,43 +359,6 @@
             this.panel9.Size = new System.Drawing.Size(255, 41);
             this.panel9.TabIndex = 4;
             // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.txbEmployeeLastName);
-            this.panel15.Controls.Add(this.label5);
-            this.panel15.Controls.Add(this.panel16);
-            this.panel15.Location = new System.Drawing.Point(17, 102);
-            this.panel15.Margin = new System.Windows.Forms.Padding(4);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(255, 41);
-            this.panel15.TabIndex = 5;
-            // 
-            // txbEmployeeLastName
-            // 
-            this.txbEmployeeLastName.Location = new System.Drawing.Point(100, 10);
-            this.txbEmployeeLastName.Margin = new System.Windows.Forms.Padding(4);
-            this.txbEmployeeLastName.Name = "txbEmployeeLastName";
-            this.txbEmployeeLastName.Size = new System.Drawing.Size(126, 22);
-            this.txbEmployeeLastName.TabIndex = 3;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 14);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 16);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Tên:";
-            // 
-            // panel16
-            // 
-            this.panel16.Location = new System.Drawing.Point(4, 86);
-            this.panel16.Margin = new System.Windows.Forms.Padding(4);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(457, 123);
-            this.panel16.TabIndex = 1;
-            // 
             // txbEmployeeFirstName
             // 
             this.txbEmployeeFirstName.Location = new System.Drawing.Point(100, 10);
@@ -496,6 +496,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -506,8 +508,6 @@
             this.panel13.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvEmployee)).EndInit();

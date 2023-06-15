@@ -181,27 +181,14 @@ namespace BookStoreManagement
 
         private void btnAddBook_Click(object sender, EventArgs e)
         {
-            string title = txbTitle.Text;
-            string author = txbAuthorBook.Text;
-            string publisher = txbPublisher.Text;
-            int publish_year = (int) nudYear.Value;
-            int stock = (int) nudStock.Value;
-            string category = txbCategory.Text;
-            int price = (int)nudPriceBook.Value;
-
-            if (BookDAO.Instance.InsertBook(title, author, publisher, publish_year, stock, category, price))
-            {
-                MessageBox.Show("Thêm sách thành công");
-                LoadListBook();
-                if (insertBook != null)
-                    insertBook(this, new EventArgs());
-            }
-            else
-            {
-                MessageBox.Show("Có lỗi khi thêm sách");
-            }
-            
+            fAddBook f = new fAddBook();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+            LoadListBook();
         }
+
+        
 
         private void btnUpdateBook_Click(object sender, EventArgs e)
         {
@@ -227,19 +214,9 @@ namespace BookStoreManagement
             }
         }
 
-        private event EventHandler insertBook;
-        public event EventHandler InsertBook
-        {
-            add { insertBook += value; }
-            remove { insertBook -= value; }
-        }
+        
 
-        private event EventHandler insertSupplier;
-        public event EventHandler InsertSupplier
-        {
-            add { insertSupplier += value; }
-            remove { insertSupplier -= value; }
-        }
+        
 
         private event EventHandler updateBook;
         public event EventHandler UpdateBook
@@ -276,25 +253,12 @@ namespace BookStoreManagement
 
         private void btnAddSupplier_Click(object sender, EventArgs e)
         {
-            string name = txbSupplierName.Text;
-            string address = txbSupplierAddress.Text;
-            string email = txbSupplierEmail.Text;
-            string phone = txbSupplierNumber.Text;
-            string bank = txbBank.Text;
-            string tax_code = txbTax.Text;
-
-            if (SupplierDAO.Instance.InsertSupplier(name, address, email, phone, bank, tax_code))
-            {
-                MessageBox.Show("Thêm nhà cung cấp thành công");
-                LoadListSupplier();
-                LoadListComboBoxSupplier();
-                if (insertSupplier != null)
-                    insertSupplier(this, new EventArgs());
-            }
-            else
-            {
-                MessageBox.Show("Có lỗi khi thêm nhà cung cấp");
-            }
+            fAddSupplier f = new fAddSupplier();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+            LoadListSupplier();
+            LoadListComboBoxSupplier();
         }
 
         private void btnAllSupplier_Click(object sender, EventArgs e)
@@ -337,8 +301,15 @@ namespace BookStoreManagement
 
         private void chứcNăngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fAdmin f = new fAdmin();
-            f.ShowDialog();
+            if (LoginAccount.IsManager == 1)
+            {
+                fAdmin f = new fAdmin();
+                f.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có đủ quyền để truy cập!");
+            }
         }
 
         private void btnEntryBook_Click(object sender, EventArgs e)
@@ -368,6 +339,11 @@ namespace BookStoreManagement
         {
             int bookEntryId = Convert.ToInt32(txbIdBookEntry.Text);
             LoadBookEntryDetailsByBookEntryId(bookEntryId);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LoadListBookEntryByDate(dtpkFromDateBookEntry.Value, dtpkToDateBookEntry.Value);
         }
     }
 }

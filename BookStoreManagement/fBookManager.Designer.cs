@@ -211,10 +211,10 @@
             // txbIdInvoice
             // 
             this.txbIdInvoice.Enabled = false;
-            this.txbIdInvoice.Location = new System.Drawing.Point(849, 73);
+            this.txbIdInvoice.Location = new System.Drawing.Point(869, 73);
             this.txbIdInvoice.Margin = new System.Windows.Forms.Padding(4);
             this.txbIdInvoice.Name = "txbIdInvoice";
-            this.txbIdInvoice.Size = new System.Drawing.Size(49, 22);
+            this.txbIdInvoice.Size = new System.Drawing.Size(29, 22);
             this.txbIdInvoice.TabIndex = 24;
             // 
             // label18
@@ -429,6 +429,7 @@
             // 
             // nudStock
             // 
+            this.nudStock.Enabled = false;
             this.nudStock.Location = new System.Drawing.Point(99, 12);
             this.nudStock.Maximum = new decimal(new int[] {
             100000,
@@ -1210,6 +1211,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Tìm";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dtpkToDateBookEntry
             // 

@@ -63,6 +63,24 @@
     <Compile Include="DTO\Invoice.cs" />
     <Compile Include="DTO\InvoiceDetail.cs" />
     <Compile Include="DTO\Supplier.cs" />
+    <Compile Include="fAddBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAddBook.Designer.cs">
+      <DependentUpon>fAddBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fAddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAddEmployee.Designer.cs">
+      <DependentUpon>fAddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fAddSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAddSupplier.Designer.cs">
+      <DependentUpon>fAddSupplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="fAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +113,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fAddBook.resx">
+      <DependentUpon>fAddBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fAddEmployee.resx">
+      <DependentUpon>fAddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fAddSupplier.resx">
+      <DependentUpon>fAddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fAdmin.resx">
       <DependentUpon>fAdmin.cs</DependentUpon>
     </EmbeddedResource>

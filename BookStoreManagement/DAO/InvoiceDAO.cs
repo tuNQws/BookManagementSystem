@@ -90,7 +90,7 @@ namespace BookStoreManagement.DAO
 
         public DataTable GetInvoiceListByDate(DateTime fromDate, DateTime toDate)
         {
-            string query = string.Format("SELECT * FROM invoice WHERE date_invoice >= N'{0}' AND date_invoice <= N'{1}'", fromDate, toDate);
+            string query = string.Format("SELECT * FROM invoice WHERE date_invoice >= N'{0}' AND date_invoice <= N'{1}' AND status = N'checked'", fromDate, toDate);
             return DataProvider.Instance.ExecuteQuery(query);
         }
 

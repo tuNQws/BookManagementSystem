@@ -13,3 +13,6 @@ C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.fBo
 C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.fCashier.resources
 C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.fAdmin.resources
 C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.fBookEntry.resources
+C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.fAddBook.resources
+C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.fAddEmployee.resources
+C:\Users\tuan\source\repos\BookStoreManagement\obj\Debug\BookStoreManagement.fAddSupplier.resources
