@@ -64,7 +64,6 @@
             this.btnSearchEmployee = new System.Windows.Forms.Button();
             this.dtgvEmployee = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnDeleteEmployee = new System.Windows.Forms.Button();
             this.btnUpdateEmployee = new System.Windows.Forms.Button();
             this.btnGetAllEmployee = new System.Windows.Forms.Button();
             this.btnAddEmployee = new System.Windows.Forms.Button();
@@ -423,7 +422,6 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.btnDeleteEmployee);
             this.panel5.Controls.Add(this.btnUpdateEmployee);
             this.panel5.Controls.Add(this.btnGetAllEmployee);
             this.panel5.Controls.Add(this.btnAddEmployee);
@@ -432,19 +430,9 @@
             this.panel5.Size = new System.Drawing.Size(576, 44);
             this.panel5.TabIndex = 3;
             // 
-            // btnDeleteEmployee
-            // 
-            this.btnDeleteEmployee.Location = new System.Drawing.Point(438, 0);
-            this.btnDeleteEmployee.Name = "btnDeleteEmployee";
-            this.btnDeleteEmployee.Size = new System.Drawing.Size(135, 41);
-            this.btnDeleteEmployee.TabIndex = 3;
-            this.btnDeleteEmployee.Text = "Xóa";
-            this.btnDeleteEmployee.UseVisualStyleBackColor = true;
-            this.btnDeleteEmployee.Click += new System.EventHandler(this.btnDeleteEmployee_Click);
-            // 
             // btnUpdateEmployee
             // 
-            this.btnUpdateEmployee.Location = new System.Drawing.Point(283, 0);
+            this.btnUpdateEmployee.Location = new System.Drawing.Point(428, 0);
             this.btnUpdateEmployee.Name = "btnUpdateEmployee";
             this.btnUpdateEmployee.Size = new System.Drawing.Size(145, 41);
             this.btnUpdateEmployee.TabIndex = 2;
@@ -454,7 +442,7 @@
             // 
             // btnGetAllEmployee
             // 
-            this.btnGetAllEmployee.Location = new System.Drawing.Point(136, 0);
+            this.btnGetAllEmployee.Location = new System.Drawing.Point(211, 0);
             this.btnGetAllEmployee.Name = "btnGetAllEmployee";
             this.btnGetAllEmployee.Size = new System.Drawing.Size(141, 41);
             this.btnGetAllEmployee.TabIndex = 1;
@@ -523,7 +511,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnDeleteEmployee;
         private System.Windows.Forms.Button btnUpdateEmployee;
         private System.Windows.Forms.Button btnGetAllEmployee;
         private System.Windows.Forms.Button btnAddEmployee;

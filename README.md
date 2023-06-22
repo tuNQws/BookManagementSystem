@@ -12,7 +12,7 @@ Tech stacks:
 
 - Front-end: winform
 - Back-end: winform
-- Database: MySQL
+- Database: MS SQL Server
 - Login 
 + ID: admin
-+ Password: 123456
++ Password: admin
